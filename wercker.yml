@@ -18,7 +18,7 @@ build:
         - script:
             name: validate kubernetes archive
             code: |
-                cat /tmp/kubernetes.tar.gz | sha256sum | grep -q "KUBERNETES_SHA256"
+                cat /tmp/kubernetes.tar.gz | sha256sum | grep -q "$KUBERNETES_SHA256"
 
         - script:
             name: extract kubernetes archive
